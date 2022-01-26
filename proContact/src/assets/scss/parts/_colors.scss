@@ -1,0 +1,35 @@
+
+// scss-docs-start gray-color-variables
+$black: #ffc107;
+$gray-900: #e6ae06;
+$gray-800: #cc9a06;
+$gray-700: #b38705;
+$gray-600: #997404;
+$gray-500: #806104;
+$gray-400: #664d03;
+$gray-300: #4c3a02;
+$gray-200: #332701;
+$gray-100: #191301;
+$white: #010101;
+// scss-docs-end gray-color-variables
+
+/* Main Colors */
+$primary: #ffc107;
+$secondary: #deb887;
+$success: #2dd36f;
+$info: #007bff;
+$warning: #f17800;
+$danger: #ff4444;
+$light: #fafafa;
+$dark: #010101;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);

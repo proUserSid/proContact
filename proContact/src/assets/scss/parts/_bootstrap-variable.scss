@@ -1,0 +1,69 @@
+/* 
+==========================================
+  Index
+==========================================
+  1. Colors Variable
+  2. Bootstrap Optios
+  3. Bootstrap Breakpoints and Container
+  4. Gradient Variable and css
+*/
+
+/* Colors Variable */
+@import "./_colors.scss";
+/* Colors Variable Ends */
+
+/* Bootstrap Optios */
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-rfs: true;
+$enable-negative-margins: true;
+$enable-deprecation-messages: false;
+$enable-validation-icons: false;
+$min-contrast-ratio: 3.5;
+/* Bootstrap Optios Ends */
+
+/* Bootstrap Breakpoints and Container */
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  xm: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+/* Bootstrap Breakpoints and Container Ends */
+
+/* Gradient Variable and css */
+$gradient: linear-gradient(90deg, rgba($white, 0), rgba($white, 0.45));
+:root {
+  --btn-gradient: linear-gradient(
+    90deg,
+    rgba(1, 1, 1, 0.65),
+    rgba(1, 1, 1, 0),
+    rgba(1, 1, 1, 0.65)
+  );
+  --form-control-gradient: linear-gradient(
+    90deg,
+    rgba(1, 1, 1, 0.8),
+    rgba(1, 1, 1, 0),
+    rgba(1, 1, 1, 0.8)
+  );
+}
+/* Gradient Variable and css Ends */
+
+/* Accordian CSS */
+$accordion-border-color: rgba($black, 0.5);
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: $white;
+/* Accordian CSS Ends */

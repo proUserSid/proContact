@@ -1,0 +1,32 @@
+/* 
+===================================
+   INDEX
+===================================
+
+1. Bootstrap Import
+1. Button CSS
+1. Button Forms
+1. Button Alerts
+
+*/
+
+/* Bootstrap Import */
+@import "./parts/_bootstrap-variable.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+/* Bootstrap Import Ends */
+
+/* Icon Import */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* Icon Import Ends */
+
+/* Button CSS */
+@import "./parts/buttons";
+/* Button CSS Ends */
+
+/* Forms CSS */
+@import "./parts/forms";
+/* Forms CSS Ends */
+
+/* Layout CSS  */
+@import "./parts/layout";
+/* Layout CSS Ends  */

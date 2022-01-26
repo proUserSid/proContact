@@ -1,0 +1,79 @@
+@import "./colors";
+
+.form-control {
+  --cc-color-rgb: var(--bs-primary-rgb);
+  --cc-color: var(--bs-primary);
+
+  background-size: 200% 200%;
+  border-color: rgba(var(--cc-color-rgb), 0.85);
+  color: var(--cc-color);
+  &:focus {
+    border-color: var(--cc-color);
+    color: var(--cc-color);
+    background-color: rgba(var(--cc-color-rgb), 0.1);
+    animation: gradient 1s ease infinite;
+    background-image: var(--btn-gradient);
+    box-shadow: 0 0 0 0.15rem rgba(var(--cc-color-rgb), 0.15);
+  }
+}
+
+.form-label,
+.form-text {
+  --cc-color-rgb: var(--bs-primary-rgb);
+  --cc-color: var(--bs-primary);
+
+  color: var(--cc-color);
+}
+
+.form-check {
+  --cc-color-rgb: var(--bs-primary-rgb);
+  --cc-color: var(--bs-primary);
+
+  color: var(--cc-color);
+  .form-check-input {
+    border: 1px solid rgba(var(--cc-color-rgb), 0.85);
+    &:focus {
+      border-color: rgba(var(--cc-color-rgb), 0.85);
+      outline: 0;
+      box-shadow: 0 0 0 0.15rem rgba(var(--cc-color-rgb), 0.5);
+    }
+    &:checked {
+      background-color: var(--cc-color);
+      border-color: var(--cc-color);
+    }
+  }
+}
+
+.form-select-container {
+  .form-select {
+    background-image: var(--btn-gradient);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .fc-#{$color} {
+    .form-label,
+    .form-text,
+    .form-control,
+    .form-check {
+      --cc-color-rgb: var(--bs-#{$color}-rgb);
+      --cc-color: var(--bs-#{$color});
+    }
+  }
+}
+
+.ng-submitted,
+.pre-validate {
+  .form-control.ng-invalid {
+    --cc-color-rgb: var(--bs-danger-rgb);
+    & ~ .invalid-feedback {
+      display: block;
+    }
+  }
+  &.show-valid .form-control.ng-valid {
+    --cc-color-rgb: var(--bs-success-rgb);
+    & ~ .valid-feedback {
+      display: block;
+    }
+  }
+}

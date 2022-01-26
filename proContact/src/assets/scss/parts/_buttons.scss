@@ -1,0 +1,51 @@
+@import "./colors";
+@import "./mixins/buttons";
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.btn {
+  background-size: 200% 200%;
+  background-position: 100% 100%;
+  background-image: var(--btn-gradient);
+  &:hover,
+  &:focus {
+    animation: gradient 1s ease infinite;
+    background-image: var(--btn-gradient);
+    box-shadow: none;
+  }
+  &:disabled,
+  &.disabled {
+    pointer-events: unset;
+    cursor: not-allowed;
+    animation: none;
+  }
+}
+
+.btn-link {
+  text-decoration: underline;
+  padding: 0;
+  background-image: none;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .link-#{$color} {
+    @include button-link-variant($value);
+  }
+}
+// scss-docs-end btn-variant-loops

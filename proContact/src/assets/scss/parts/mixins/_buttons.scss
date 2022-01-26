@@ -1,0 +1,35 @@
+// scss-docs-start btn-outline-variant-mixin
+@mixin button-outline-variant(
+  $color,
+  $active-border: $color,
+  $active-background: $color,
+  $active-color: color-contrast($active-background)
+) {
+  &:hover,
+  &:focus {
+    color: $active-border;
+    background-color: rgba($color, 0.25);
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  &.dropdown-toggle.show {
+    color: $active-color;
+    background-color: $active-background;
+  }
+}
+// scss-docs-end btn-outline-variant-mixin
+
+// scss-docs-start btn-link-variant-mixin
+@mixin button-link-variant($color) {
+  color: $color;
+
+  &:hover,
+  &:focus {
+    color: $color;
+    background-color: rgba($color, 0.25);
+  }
+}
+// scss-docs-end btn-link-variant-mixin
