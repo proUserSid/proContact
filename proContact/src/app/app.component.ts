@@ -15,10 +15,7 @@ export class AppComponent {
   contacts = [];
   subscriptions: Subscription[] = [];
 
-  constructor(
-    private router: Router,
-    private contactApiService: ContactApiService
-  ) {}
+  constructor(private contactApiService: ContactApiService) {}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -27,17 +24,6 @@ export class AppComponent {
       this.contactApiService.contactList.subscribe((data) => {
         this.contacts = data;
       })
-    );
-  }
-
-  onCreate(contact: any) {
-    this.contactApiService.setContact(contact).subscribe(
-      (success: any) => {
-        console.log('Success Save', success);
-      },
-      (error: any) => {
-        console.log('Error Save', error);
-      }
     );
   }
 }
